@@ -26,6 +26,7 @@ namespace NLogSample.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
+            _logger.LogDebug(DateTime.Now.ToString("s"));
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
                              {
